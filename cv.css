@@ -1,0 +1,261 @@
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans);
+@import url(http://fonts.googleapis.com/css?family=PT+Serif);
+@font-face {
+    font-family: 'loveloblack';
+    src: url('fonts/lovelo_black-webfont.eot');
+    src: url('fonts/lovelo_black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/lovelo_black-webfont.woff') format('woff'),
+         url('fonts/lovelo_black-webfont.ttf') format('truetype'),
+         url('fonts/lovelo_black-webfont.svg#loveloblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* typography */
+html {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h1 {
+	font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
+	letter-spacing: -1px;
+}
+#titles {
+	font-family: loveloblack, Verdana, Helvetica, sans-serif;
+	font-weight:bold;
+	font-variant:small-caps;
+	letter-spacing: 1px;
+}
+h2 {
+	font-family: loveloblack, Verdana, Helvetica, sans-serif;
+	font-weight: bold;
+	line-height: 0;
+}
+#summary {
+	font-family: 'PT Serif', serif;
+}
+
+/* layout */
+.hidden { display: none; }
+.right { float: right; }
+.left { float: left; }
+.clear { clear: both; }
+.center { margin: 0 auto; text-align: center; }
+.clickable { cursor: pointer; }
+.relative { position: relative; }
+.lrm {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+body {
+	margin: 0 auto;
+	margin-bottom: 10px;
+	max-width: 1200px;
+	min-width: 800px;
+	width: 85%;
+}
+p {
+	margin: 3px 0 3px 0;
+}
+#summary p {
+	margin: 8px 0 8px 0;
+}
+#header {
+	position: fixed;
+	height: 68px;
+	max-width: 1200px;
+	min-width: 800px;
+	width: 85%;
+	z-index: 10;
+}
+#titles {
+	position: relative;
+	top: -6px;
+	left: 4px;
+}
+#contact-info {
+	padding:10px 0 0 0;
+}
+#contact-info img {
+	padding: 4px 0 2px 4px;
+	vertical-align: bottom;
+}
+#summary {
+/*	background-color:rgba(255,255,255,0.5); */
+	padding: 78px 20px 10px 20px;
+}
+#articles-triggers span {
+	z-index: 4;
+	text-decoration: underline;
+}
+h2 {
+	padding: 12px 0 10px 0;
+	position: relative;
+	left: -1px;
+	top: 2px;
+}
+h3 {
+	margin-top: 20px;
+}
+h4 {
+	padding: 0 0 6px 0;
+}
+li {
+	padding: 2px 0 2px 0;
+}
+article {
+	padding: 0 20px 0 12px;
+	margin: 20px 0 30px 0;
+}
+article.brief .brief, #articles-triggers.brief .brief {
+	display: block;
+}
+article.brief .briefinl {
+	display: inline;
+}
+article.brief .long, #articles-triggers.brief .long {
+	display: none;
+}
+article.long .brief, #articles-triggers.long .brief {
+	display: none;
+}
+article.long .long, #articles-triggers.long .long {
+	display: block;
+}
+article.long .longinl {
+	display: inline;
+}
+.techs li {
+	padding: 1px 0;
+}
+.position {
+	padding: 4px 0 8px 0;
+}
+.company-info {
+	padding: 0 0 10px 80px;
+}
+.highlights, .techs {
+	margin-top: 10px;
+}
+table td {
+	padding: 4px 0;
+}
+table td.skillgroup {
+	padding-right: 20px;
+}
+
+/* style */
+html {
+	background-color: #d0d0d0;
+	background-image: linear-gradient(#d0d0d0 0%, #b8b8b8 100%);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	color: #555;
+	font-size: 14px;
+}
+body {
+	background-color: #fff;
+	box-shadow: 0 2px 4px #444;
+	text-align: justify;
+}
+em { font-weight: bold; }
+i { font-style: italic; }
+.seb_anicol {
+	background-color: #4fadd0;
+/*	box-shadow: 0 2px 4px #4fadd0; */
+}
+#header {
+	color: #000;
+}
+#titles {
+	color: #fff;
+	text-shadow: 1px 1px 2px #444;
+}
+#contact-info {
+	font-size: 80%;
+	font-weight: bold;
+	text-align: right;
+}
+.contact-link:hover, .contact-link a:hover {
+	background-color: #fff;
+	color: #000 !important;
+}
+#email {
+	font-size: 110%;
+}
+#summary {
+	background-color: #77c0db;
+	color: #000;
+	font-size: 120%;
+	text-align: left;
+}
+h1 {
+	font-size: 370%;
+	font-weight: bold;
+}
+h2 {
+	font-size: 220%;
+	color: #ddd;
+}
+h3 {
+	font-size: 160%;
+	color: #4fadd0;
+	text-shadow: 1px 1px 1px #ccc;
+}
+h4 {
+	font-size: 90%;
+	color: #aaa;
+}
+a { text-decoration: none; color: #444; }
+a:hover { text-decoration: underline; color: #4fadd0 !important; }
+.hoversrc {
+	cursor: default;
+	color: #444;
+}
+.hoversrc:hover { color: #4fadd0; }
+.hoverbox {
+	position: absolute;
+	padding: 4px;
+	box-shadow: 1px 1px 3px #bbbbbb;
+	background-color: white;
+	top: -20px;
+	left: 10%;
+	z-index: 20;
+}
+article {
+	position:relative;
+	border-left: 8px solid white;
+}
+article:hover {
+	color: #000;
+	border-left: 8px solid #ddd;
+}
+article.long:hover, article.brief:hover {
+	color: #000;
+	border-left: 8px solid #222;
+}
+article:hover a { text-decoration: underline; color: #00c; }
+article:hover .hoversrc, article:hover .hovertxt { color: #00c; }
+.timerange {
+	font-weight: bold;
+	font-size: 110%;
+}
+.position {
+	font-weight: bold;
+}
+.company-info {
+	font-size: 95%;
+	color: #777;
+}
+.brand {
+	font-style: italic;
+	color: #555;
+}
+.skillgroup {
+	font-weight: bold;
+	color: #aaa;
+}
+#revision {
+	font-size: 9px;
+	padding-bottom: 4px;
+}
+
+
