@@ -6,56 +6,56 @@ var original_color = jQuery.Color("#4fadd0"),
 	period = 120000,
 	reset_speed = 1000,
 	check_speed = 8000;
-/*function checkcolor() {
-    var c = jQuery.Color($("header"), "background-color"),
-        hc = c.toHexString(false);
-    $("#header").css("box-shadow", "0 2px 4px "+hc);
-    $("#summary").css("box-shadow", "0 2px 4px "+hc);
-    if (cycle) setTimeout(checkcolor, check_speed);
+/*	function checkcolor() {
+	var c = jQuery.Color($("header"), "background-color"),
+		hc = c.toHexString(false);
+	$("#header").css("box-shadow", "0 2px 4px "+hc);
+	$("#summary").css("box-shadow", "0 2px 4px "+hc);
+	if (cycle) setTimeout(checkcolor, check_speed);
 }*/
 function randomcolor() {
-    var rh = Math.random() * 359,
-        rs = Math.random() / 2.0 + 0.1,
-        c = jQuery.Color({ hue: rh, saturation: rs, lightness: 0.7, alpha: 1.0 });
-    return c;
+	var rh = Math.random() * 359,
+	rs = Math.random() / 2.0 + 0.1,
+	c = jQuery.Color({ hue: rh, saturation: rs, lightness: 0.7, alpha: 1.0 });
+	return c;
 }
 function animate(tocolor, speed) {
-    if (!cycle && typeof tocolor === "undefined") tocolor = co;
-    var c = typeof tocolor !== "undefined" ? tocolor : randomcolor(),
+	if (!cycle && typeof tocolor === "undefined") tocolor = co;
+	var c = typeof tocolor !== "undefined" ? tocolor : randomcolor(),
 		c2 = c.lightness("+=0.1");
-    if (typeof speed === "undefined") speed = period;
-    console.log("new color "+c+" hue "+c.hue().toFixed(0)+" sat "+c.saturation().toFixed(2)+ ", light "+c2);
-    $("#header").animate({backgroundColor: c}, speed, function () { if (cycle) animate(); });
-    $("h3").animate({color: c}, speed);
-    $("#summary").animate({backgroundColor: c2}, speed);
+	if (typeof speed === "undefined") speed = period;
+	console.log("new color "+c+" hue "+c.hue().toFixed(0)+" sat "+c.saturation().toFixed(2)+ ", light "+c2);
+	$("#header").animate({backgroundColor: c}, speed, function () { if (cycle) animate(); });
+	$("h3").animate({color: c}, speed);
+	$("#summary").animate({backgroundColor: c2}, speed);
 //  setTimeout(checkcolor, check_speed);
 }
 function start() {
-    if (cycle) return;
-    console.log("start color cycling");
-    cycle = true;
-    animate();
+	if (cycle) return;
+	console.log("start color cycling");
+	cycle = true;
+	animate();
 }
 function stop() {
-    if (!cycle) return;
-    console.log("stop color cycling");
-    cycle = false;
-    $("#header").stop(true);
-    $("#summary").stop(true);
-    $("h3").stop(true);
+	if (!cycle) return;
+	console.log("stop color cycling");
+	cycle = false;
+	$("#header").stop(true);
+	$("#summary").stop(true);
+	$("h3").stop(true);
 }
 function toggle() {
-    if (cycle) stop(); else start();
+	if (cycle) stop(); else start();
 }
 function reset() {
-    stop();
-    console.log("reset to default color");
-    animate(original_color, reset_speed);
+	stop();
+	console.log("reset to default color");
+	animate(original_color, reset_speed);
 }
 $(".seb_anicol").click(toggle);
 $(".seb_anicol").dblclick(reset);
 return {
-    start: start
+	start: start
 };
 })();
 
@@ -66,7 +66,7 @@ return {
 })();
 
 $("article a").click(function(e) {
-   e.stopPropagation();
+	e.stopPropagation();
 });
 
 function toggle_article(article$, expand) {
@@ -80,6 +80,7 @@ function toggle_article(article$, expand) {
 		console.log('short story');
 	}
 }
+
 function toggle_all(expand) {
 	if (expand) {
 		console.log('expand all');
@@ -90,6 +91,7 @@ function toggle_all(expand) {
 	}
 	$('article').each(function () { toggle_article($(this), expand); });
 }
+
 $('article').on("click", function (e) { toggle_article($(this)); });
 $('#articles-trigger-expand').click(function () { toggle_all(true); });
 $('#articles-trigger-collapse').click(function () { toggle_all(false); });
@@ -99,13 +101,13 @@ SEB_COLORCYCLER.start();
 });
 
 function smouseover(name) {
-  var e = document.getElementById(name);
-  if (!e) return;
-  e.style.display = 'block';
+	var e = document.getElementById(name);
+	if (!e) return;
+	e.style.display = 'block';
 }
 function smouseout(name) {
-  var e = document.getElementById(name);
-  if (!e) return;
-  e.style.display = 'none';
+	var e = document.getElementById(name);
+	if (!e) return;
+	e.style.display = 'none';
 }
 
