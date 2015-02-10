@@ -60,7 +60,7 @@ return {
 })();
 
 (function(){
-	var t='.net', d='eseb'+t, u='seb', s='<a href=\"mailto:'+u+'@'+d+'\">'+u+'@'+d+'</a>';
+	var t='.com', d='gmail'+t, u='sebnukem', s='<a href=\"mailto:'+u+'@'+d+'\">'+u+'@'+d+'</a>';
 	document.getElementById('email').innerHTML = s;
 	document.getElementById('email').title="mailto: "+u+"@"+d;
 })();
