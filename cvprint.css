@@ -2,6 +2,15 @@
 	size: auto;
 	margin: 0.45in 0.5in 0.30in 0.45in;
 }
+.print-only-b {
+	display: block;
+}
+.print-only-i {
+	display: inline;
+}
+.screen-only {
+	display: none;
+}
 html, body, th, td {
 	background-color: #fff;
 	color: #000;

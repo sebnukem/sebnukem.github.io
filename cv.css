@@ -34,6 +34,8 @@ h2 {
 }
 
 /* layout */
+.print-only-b { display: none; }
+.print-only-i { display: none; }
 .hidden { display: none; }
 .right { float: right; }
 .left { float: left; }
