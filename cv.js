@@ -2,10 +2,10 @@ $(document).ready(function(){
 
 var SEB_COLORCYCLER = (function(){
 var original_color = jQuery.Color("#4fadd0"),
-	cycle = false,
-	period = 120000,
-	reset_speed = 1000,
-	check_speed = 8000;
+    cycle = false,
+    period = 120000,
+    reset_speed = 1000,
+    check_speed = 8000;
 /*	function checkcolor() {
 	var c = jQuery.Color($("header"), "background-color"),
 		hc = c.toHexString(false);
@@ -22,7 +22,7 @@ function randomcolor() {
 function animate(tocolor, speed) {
 	if (!cycle && typeof tocolor === "undefined") tocolor = co;
 	var c = typeof tocolor !== "undefined" ? tocolor : randomcolor(),
-		c2 = c.lightness("+=0.1");
+	    c2 = c.lightness("+=0.1");
 	if (typeof speed === "undefined") speed = period;
 	console.log("new color "+c+" hue "+c.hue().toFixed(0)+" sat "+c.saturation().toFixed(2)+ ", light "+c2);
 	$("#header").animate({backgroundColor: c}, speed, function () { if (cycle) animate(); });
